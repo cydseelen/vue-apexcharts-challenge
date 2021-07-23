@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Vue Apexcharts Challenge</h1>
+    <h1 class="mb-4">Vue Apexcharts Challenge</h1>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>

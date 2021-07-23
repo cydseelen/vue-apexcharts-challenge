@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="card text-center mx-auto pt-4 chart-wrapper" style="width: 30rem; height: 20rem;">
     <div id="chart">
-      <apexchart type="donut" height="300px"
+      <apexchart type="donut" height="600px"
       :options="chartOptions" :series="series">
       </apexchart>
     </div>
@@ -34,7 +34,7 @@ export default {
       text: 'Gender',
       align: 'center',
       style: {
-        fontSize: '100px',
+        fontSize: '20px',
       }
     },
     }
@@ -54,5 +54,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
 </style>
