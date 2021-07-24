@@ -31,34 +31,22 @@ export default {
     chartOptions1: {
       labels: ['female', 'male', 'undefined'],
       colors:['#9e0059', '#78BFFF', '#5c0799'],
-      chart: {
-      id: 'vuechart-example',
-      type: 'donut',
-    },
     },
     title1: {
       text: 'Gender',
       },
     series2: [],
     chartOptions2: {
-      labels: ['female', 'male', 'undefined'],
+      labels: ['Below 25', 'Between 25 and 40', 'Above 40'],
       colors:['#9e0059', '#78BFFF', '#5c0799'],
-      chart: {
-      id: 'vuechart-example',
-      type: 'donut',
-    },
     },
     title2: {
       text: 'Gender',
       },
     series3: [],
     chartOptions3: {
-      labels: ['female', 'male', 'undefined'],
+      labels: ['Costa Rica', 'India', 'Canada'],
       colors:['#9e0059', '#78BFFF', '#5c0799'],
-      chart: {
-      id: 'vuechart-example',
-      type: 'donut',
-    },
     },
     title3: {
       text: 'Gender',
@@ -67,20 +55,21 @@ export default {
   },
     methods:{
       getData(){
+        // Chart 1
         const valuesArray1 = [];
         this.json.profiles[0].data.forEach(element => {
 
           valuesArray1.push(element.value) ;
         });
         this.series1 = valuesArray1;
-
+        // Chart 2
         const valuesArray2 = [];
         this.json.profiles[1].data.forEach(element => {
 
           valuesArray2.push(element.value) ;
         });
         this.series2 = valuesArray2;
-
+        // Chart3
         const valuesArray3 = [];
         this.json.profiles[2].data.forEach(element => {
 
