@@ -38,19 +38,20 @@ export default {
     }
   },
     methods:{
-      myJson(){
-        this.series =  this.json.profiles[0].data.forEach(element => {
+      getData(){
+        const myNew = [];
+        this.json.profiles[0].data.forEach(element => {
 
-          element.value ;
+          myNew.push(element.value) ;
         });
+        this.series = myNew;
       },
       init(){
       },
     },
     mounted: function() {
         this.init();
-        console.log("from methods:", this.myJson());
-        // console.log("this.json.profiles[0].data", this.json.profiles[0].data[0].value);
+        this.getData();
       }
   }
 </script>
