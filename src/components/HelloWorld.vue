@@ -15,9 +15,7 @@ export default {
   data: function() {
     return {
     json: jsonFile,
-    series: [
-      44, 55, 41
-      ],
+    series: [],
     chartOptions: {
       labels: ['female', 'male', 'undefined'],
       chart: {
@@ -40,11 +38,19 @@ export default {
     }
   },
     methods:{
+      myJson(){
+        this.series =  this.json.profiles[0].data.forEach(element => {
+
+          element.value ;
+        });
+      },
       init(){
       },
     },
     mounted: function() {
         this.init();
+        console.log("from methods:", this.myJson());
+        // console.log("this.json.profiles[0].data", this.json.profiles[0].data[0].value);
       }
   }
 </script>
