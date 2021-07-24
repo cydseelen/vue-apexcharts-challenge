@@ -8,13 +8,13 @@
 
     <div class="card text-center mx-auto mb-3 pt-4 chart-wrapper" style="width: 30rem; height: 20rem;">
       <apexchart type="donut" height="600px"
-      :options="chartOptions1" :series="series1">
+      :options="chartOptions2" :series="series2">
       </apexchart>
     </div>
 
     <div class="card text-center mx-auto mb-3 pt-4 chart-wrapper" style="width: 30rem; height: 20rem;">
       <apexchart type="donut" height="600px"
-      :options="chartOptions1" :series="series1">
+      :options="chartOptions3" :series="series3">
       </apexchart>
     </div>
   </div>
@@ -36,7 +36,31 @@ export default {
       type: 'donut',
     },
     },
-    title: {
+    title1: {
+      text: 'Gender',
+      },
+    series2: [],
+    chartOptions2: {
+      labels: ['female', 'male', 'undefined'],
+      colors:['#9e0059', '#78BFFF', '#5c0799'],
+      chart: {
+      id: 'vuechart-example',
+      type: 'donut',
+    },
+    },
+    title2: {
+      text: 'Gender',
+      },
+    series3: [],
+    chartOptions3: {
+      labels: ['female', 'male', 'undefined'],
+      colors:['#9e0059', '#78BFFF', '#5c0799'],
+      chart: {
+      id: 'vuechart-example',
+      type: 'donut',
+    },
+    },
+    title3: {
       text: 'Gender',
       }
     }
@@ -49,6 +73,20 @@ export default {
           valuesArray1.push(element.value) ;
         });
         this.series1 = valuesArray1;
+
+        const valuesArray2 = [];
+        this.json.profiles[1].data.forEach(element => {
+
+          valuesArray2.push(element.value) ;
+        });
+        this.series2 = valuesArray2;
+
+        const valuesArray3 = [];
+        this.json.profiles[2].data.forEach(element => {
+
+          valuesArray3.push(element.value) ;
+        });
+        this.series3 = valuesArray3;
       },
       init(){
       },

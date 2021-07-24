@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1 class="mb-4">Vue Apexcharts Challenge</h1>
+    <h1 class="mb-2">Vue Apexcharts Challenge</h1>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -23,6 +23,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 </style>
