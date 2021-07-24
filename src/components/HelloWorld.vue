@@ -2,7 +2,7 @@
   <div class="card text-center mx-auto pt-4 chart-wrapper" style="width: 30rem; height: 20rem;">
     <div id="chart">
       <apexchart type="donut" height="600px"
-      :options="chartOptions" :series="series">
+      :options="chartOptions1" :series="series1">
       </apexchart>
     </div>
   </div>
@@ -15,15 +15,15 @@ export default {
   data: function() {
     return {
     json: jsonFile,
-    series: [],
-    chartOptions: {
+    series1: [],
+    chartOptions1: {
       labels: ['female', 'male', 'undefined'],
       chart: {
       id: 'vuechart-example',
       type: 'donut',
     },
     },
-    plotOptions: {
+    plotOptions1: {
       pie: {
         size: '100%',
       },
@@ -44,7 +44,7 @@ export default {
 
           myNew.push(element.value) ;
         });
-        this.series = myNew;
+        this.series1 = myNew;
       },
       init(){
       },
