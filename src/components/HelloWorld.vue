@@ -18,6 +18,7 @@ export default {
     series1: [],
     chartOptions1: {
       labels: ['female', 'male', 'undefined'],
+      colors:['#9e0059', '#78BFFF', '#5c0799'],
       chart: {
       id: 'vuechart-example',
       type: 'donut',
@@ -39,12 +40,12 @@ export default {
   },
     methods:{
       getData(){
-        const myNew = [];
+        const valuesArray1 = [];
         this.json.profiles[0].data.forEach(element => {
 
-          myNew.push(element.value) ;
+          valuesArray1.push(element.value) ;
         });
-        this.series1 = myNew;
+        this.series1 = valuesArray1;
       },
       init(){
       },
