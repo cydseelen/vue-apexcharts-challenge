@@ -1,6 +1,18 @@
 <template>
-  <div class="card text-center mx-auto pt-4 chart-wrapper" style="width: 30rem; height: 20rem;">
-    <div id="chart">
+  <div id="chart">
+    <div class="card text-center mx-auto mb-3 pt-4 chart-wrapper" style="width: 30rem; height: 20rem;">
+      <apexchart type="donut" height="600px"
+      :options="chartOptions1" :series="series1">
+      </apexchart>
+    </div>
+
+    <div class="card text-center mx-auto mb-3 pt-4 chart-wrapper" style="width: 30rem; height: 20rem;">
+      <apexchart type="donut" height="600px"
+      :options="chartOptions1" :series="series1">
+      </apexchart>
+    </div>
+
+    <div class="card text-center mx-auto mb-3 pt-4 chart-wrapper" style="width: 30rem; height: 20rem;">
       <apexchart type="donut" height="600px"
       :options="chartOptions1" :series="series1">
       </apexchart>
@@ -24,18 +36,9 @@ export default {
       type: 'donut',
     },
     },
-    plotOptions1: {
-      pie: {
-        size: '100%',
-      },
-    },
     title: {
       text: 'Gender',
-      align: 'center',
-      style: {
-        fontSize: '20px',
       }
-    },
     }
   },
     methods:{
